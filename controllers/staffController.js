@@ -51,7 +51,7 @@ function updateRecord(req, res){
 router.get('/list', (req, res)=>{
     Staff.find((err, docs)=>{
         if(!err){
-            res.render('layouts/list', {
+            res.render('layouts/main', {
                 list: docs,
             });
         }else{
