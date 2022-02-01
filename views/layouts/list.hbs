@@ -1,0 +1,28 @@
+<h3>
+    <a class="btn btn-secondary" href="layouts">Create New</a>Staff List
+</h3>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Position</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.position}}</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="/layouts/{{this.id}}">Edit</a>
+                <a class="btn btn-primary btn-sm" href="/layouts/delete/{{this.id}}"
+                onclick="return confirm('Are you sure you want to delete this record?');">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
